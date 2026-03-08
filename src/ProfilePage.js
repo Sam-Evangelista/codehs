@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { API_BASE_URL } from "./config";
 
 const CURRENT_USER_ID = 1;
-const USER_URL = `http://127.0.0.1:8000/api/users/${CURRENT_USER_ID}/`;
-const NOTES_URL = `http://127.0.0.1:8000/api/notes/?author=${CURRENT_USER_ID}`;
-const QUESTIONS_URL = `http://127.0.0.1:8000/api/questions/?author=${CURRENT_USER_ID}`;
+const USER_URL = `${API_BASE_URL}/users/${CURRENT_USER_ID}/`;
+const NOTES_URL = `${API_BASE_URL}/notes/?author=${CURRENT_USER_ID}`;
+const QUESTIONS_URL = `${API_BASE_URL}/questions/?author=${CURRENT_USER_ID}`;
 
 const courseLabels = {
   CS101: "CS 101",

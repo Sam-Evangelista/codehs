@@ -1,7 +1,9 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { API_BASE_URL } from "./config";
 
-const API_URL = "http://127.0.0.1:8000/api/questions/";
+const API_URL = `${API_BASE_URL}/questions/`;
 const CURRENT_USER_ID = 1;
+
 
 const courseLabels = {
   CS101: "CS 101",

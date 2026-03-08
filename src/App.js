@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-do
 import NotesPage from "./NotesPage";
 import QuestionsPage from "./QuestionsPage";
 import ProfilePage from "./ProfilePage";
+import { API_BASE_URL } from "./config";
 
 const CURRENT_USER_ID = 1;
 
@@ -21,7 +22,7 @@ function App() {
   useEffect(() => {
     const fetchCurrentUser = async () => {
       try {
-        const res = await fetch(`http://127.0.0.1:8000/api/users/${CURRENT_USER_ID}/`);
+        const res = await fetch(`${API_BASE_URL}/users/${CURRENT_USER_ID}/`);
         if (!res.ok) {
           throw new Error("Failed to fetch current user");
         }
